@@ -30,7 +30,7 @@ FebreAmarela.GameStateBoss = {
         this.load.spritesheet('player', 'assets/images/player/player_spritesheet.png', 82,100,11,0,0);
         this.load.image('knife', 'assets/images/player/knife.png');
 
-        this.load.spritesheet('boss', 'assets/images/inimigos/boss_spritesheet.png', 172, 86, 2, 1, 2);
+        this.load.spritesheet('boss', 'assets/images/inimigos/boss1_spritesheet.png', 172, 86, 4, 1, 2);
         this.load.image('bossParticle', 'assets/images/inimigos/particulaInimigo.png');
 
         this.load.text('bossData', 'assets/data/boss.json');
@@ -93,7 +93,7 @@ FebreAmarela.GameStateBoss = {
 
         var points = {
             "x": [591,181,618,166,501,601,224,591],
-            "y": [52,167,211,21,279,133,249,52]
+            "y": [22,50,80,167,211,21,179,103,219,22]
         };
 
         var boss = new FebreAmarela.Boss(this.game, 900, 80, 'boss', 10, points);

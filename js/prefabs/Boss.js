@@ -7,6 +7,9 @@ FebreAmarela.Boss = function (game, x, y, key, health, points) {
     this.anchor.setTo(0.5);
     this.health = health;
 
+    this.getHit = this.animations.add('getHit', [2,3], 10, false);
+    this.getHit.onComplete.add(this.animationStopped, this);
+
     this.animations.add('movimento', [0,1], 10, true);
     this.play('movimento');
 
@@ -52,6 +55,7 @@ FebreAmarela.Boss.prototype.update = function () {
 
 FebreAmarela.Boss.prototype.damage = function (amount) {
     Phaser.Sprite.prototype.damage.call(this, amount);
+    this.getHit.play('getHit');
 
     if (this.health <= 0){
         var emitter = this.game.add.emitter(this.x, this.y, 300);
@@ -79,4 +83,8 @@ FebreAmarela.Boss.prototype.createPath = function(points){
     } else {
         this.path = [];
     }
+};
+
+FebreAmarela.Boss.prototype.animationStopped = function(sprite, animation){
+    this.play('movimento');
 }
