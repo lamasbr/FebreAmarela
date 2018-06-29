@@ -18,7 +18,7 @@ FebreAmarela.GameStateGameWin = {
     create: function () {
         this.background = this.game.add.tileSprite(0, 0, 1024, 450, 'background');
 
-        this.gameWin = this.add.sprite(this.game.world.centerX, this.game.world.centerY - 70, 'gameWin');
+        this.gameWin = this.add.sprite(this.game.world.centerX, this.game.world.centerY - 35, 'gameWin');
         this.gameWin.anchor.setTo(0.5);
 
         this.startGame = this.add.sprite(this.game.world.centerX, this.game.world.centerY + 170, 'startGame');

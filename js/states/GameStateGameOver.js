@@ -18,7 +18,7 @@ FebreAmarela.GameStateGameOver = {
     create: function () {
         this.background = this.game.add.tileSprite(0, 0, 1024, 450, 'background');
 
-        this.gameOver = this.add.sprite(this.game.world.centerX, this.game.world.centerY - 100, 'gameOver');
+        this.gameOver = this.add.sprite(this.game.world.centerX, this.game.world.centerY - 30, 'gameOver');
         this.gameOver.anchor.setTo(0.5);
 
         this.startGame = this.add.sprite(this.game.world.centerX, this.game.world.centerY + 170, 'startGame');
